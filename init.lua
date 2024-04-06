@@ -1,0 +1,5 @@
+require 'bootstrap-vim'
+require 'bootstrap-lazy'
+require('lazy').setup 'plugins'
+require 'options'
+require 'keymaps'

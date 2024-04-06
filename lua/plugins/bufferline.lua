@@ -1,0 +1,33 @@
+return {}
+--return {
+--  'akinsho/bufferline.nvim',
+--  version = '*',
+--  dependencies = 'nvim-tree/nvim-web-devicons',
+--  config = function()
+--    require('bufferline').setup {
+--      options = {
+--        offsets = {
+--          {
+--            filetype = 'NvimTree',
+--            highlight = 'Directory',
+--            separator = true,
+--          },
+--        },
+--        highlights = {
+--          buffer_visible = {
+--            bold = false,
+--            italic = true,
+--          },
+--          buffer_selected = {
+--            bold = false,
+--            italic = true,
+--          },
+--          tag_selected = {
+--            bold = false,
+--            italic = true,
+--          },
+--        },
+--      },
+--    }
+--  end,
+--}
