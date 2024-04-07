@@ -34,7 +34,18 @@ local nvimtreeopen = {
     end
   end,
 }
+local nvimtreelinenumbers = {
+  desc = 'Prevent line number inside nvim-tree',
+  group = 'nvim-tree-open',
+  callback = function()
+    if vim.bo.filetype == 'NvimTree' then
+      vim.wo.statuscolumn = ''
+    end
+  end,
+}
 api.nvim_create_autocmd('VimEnter', nvimtreeopen)
+api.nvim_create_autocmd('VimEnter', nvimtreelinenumbers)
+api.nvim_create_autocmd('BufEnter', nvimtreelinenumbers)
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -64,6 +75,8 @@ opt.wrap = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.signcolumn = 'yes'
+
+wo.statuscolumn = ' %=%{v:relnum?v:relnum:v:lnum} %=%s '
 
 opt.cursorline = true
 
