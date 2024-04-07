@@ -1,21 +1,20 @@
 local colors = {
-  black = "#22262D",
-  white = "#C2CEDB",
-  red = "#e06c75",
-  green = "#98C379",
-  blue = "#61AFEF",
-  yellow = "#E5C07B",
-  gray = "#282C34",
-  darkgray = "#22272E",
-  --lightgray = '#687B99',
-  lightgray = "#607391",
-  purple = "#c678dd",
-  inactive = "#3F5470",
+  black = '#22262D',
+  white = '#ABB2BF',
+  red = '#e06c75',
+  green = '#98C379',
+  blue = '#61AFEF',
+  yellow = '#E5C07B',
+  gray = '#282C34',
+  darkgray = '#22272E',
+  lightgray = '#607391',
+  purple = '#c678dd',
+  inactive = '#282C34',
 }
 
 local customtheme = {
   normal = {
-    a = { bg = colors.lightgray, fg = colors.black },
+    a = { bg = colors.inactive, fg = colors.white },
     b = { bg = colors.inactive, fg = colors.white },
     c = { bg = colors.gray, fg = colors.white },
   },
@@ -47,13 +46,13 @@ local customtheme = {
 }
 
 return {
-  "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  'nvim-lualine/lualine.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
-    require("lualine").setup({
+    require('lualine').setup {
       options = {
         theme = customtheme,
       },
-    })
+    }
   end,
 }
