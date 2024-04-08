@@ -19,7 +19,7 @@ return {
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     init = function()
       vim.o.timeout = true
-      vim.o.timeoutlen = 300
+      vim.o.timeoutlen = 200
     end,
     config = function() -- This is the function that runs, AFTER loading
       require('which-key').setup()
