@@ -20,9 +20,6 @@ opt.expandtab = true
 opt.swapfile = false
 opt.backspace = '2'
 
--- Theme
---vim.cmd("colorscheme onedark")
-
 -- Nvim-tree
 api.nvim_create_augroup('nvim-tree-open', {})
 local nvimtreeopen = {
