@@ -9,6 +9,8 @@ return {
     vim.cmd 'hi NvimTreeFolderName guifg = #ABB2BF'
     vim.cmd 'hi NvimTreeEmptyFolderName guifg = #ABB2BF'
     vim.cmd 'hi NvimTreeOpenedFolderName guifg = #ABB2BF'
+    vim.cmd 'hi NvimTreeExecFile guifg = #ABB2BF'
+    vim.cmd 'hi NvimTreeSpecialFile guifg = #ABB2BF'
     require('nvim-tree').setup {
       sort = {
         -- sorter = "case_sensitive",
