@@ -6,6 +6,12 @@ keymap.set({ 'n', 'i' }, '<C-Right>', ':bn<CR>')
 keymap.set({ 'n', 'i' }, '<C-Down>', ':bp<CR>')
 keymap.set({ 'n', 'i' }, '<C-Left>', ':bp<CR>')
 
+-- Split windows
+keymap.set({ 'n' }, '<C-w><Up>', ':split<CR>')
+keymap.set({ 'n' }, '<C-w><Right>', ':vsplit<CR>')
+keymap.set({ 'n' }, '<C-w><Down>', '<C-w>_')
+keymap.set({ 'n' }, '<C-w><Left>', '<C-w>|')
+
 -- Navigate vim panes better
 --keymap.set('n', '<c-k>', ':wincmd k<CR>')
 --keymap.set('n', '<c-j>', ':wincmd j<CR>')
@@ -38,5 +44,6 @@ keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 keymap.set('n', '<leader>ww', '<cmd>w<CR>', { desc = 'Save File' })
 keymap.set('n', '<leader>pp', 'o<Esc>O', { desc = 'Insert paragraph' })
+keymap.set('n', '<leader>po', 'o<Esc>', { desc = 'Break line' })
 
 -- vim: ts=2 sts=2 sw=2 et
