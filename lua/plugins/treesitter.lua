@@ -13,6 +13,7 @@ return {
       'css',
       'html',
       'dockerfile',
+      'markdown',
       'csv',
       'json',
       'sql',
