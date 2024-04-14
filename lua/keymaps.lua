@@ -42,7 +42,7 @@ keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
-keymap.set('n', '<leader>ww', '<cmd>w<CR>', { desc = 'Save File' })
+keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save File' })
 keymap.set('n', '<leader>pp', 'o<Esc>O', { desc = 'Insert paragraph' })
 keymap.set('n', '<leader>po', 'o<Esc>', { desc = 'Break line' })
 
