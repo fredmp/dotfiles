@@ -10,6 +10,9 @@ return {
     },
   },
   {
+    'hrsh7th/cmp-buffer',
+  },
+  {
     'hrsh7th/nvim-cmp',
     config = function()
       local cmp = require 'cmp'
@@ -34,12 +37,11 @@ return {
           ['<C-k>'] = cmp.mapping.select_prev_item(),
           ['<C-j>'] = cmp.mapping.select_next_item(),
         },
-        sources = cmp.config.sources({
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' }, -- For luasnip users.
-        }, {
-          { name = 'buffer' },
-        }),
+        sources = cmp.config.sources {
+          { name = 'nvim_lsp', priority = 80, max_item_count = 12 },
+          { name = 'luasnip', priority = 70, max_item_count = 10 },
+          { name = 'buffer', priority = 60, max_item_count = 8 },
+        },
       }
     end,
   },
