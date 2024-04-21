@@ -18,6 +18,9 @@ return {
 
         map('n', '<leader>gb', gitsigns.toggle_current_line_blame, { desc = 'Git Blame Toggle' })
         map('n', '<leader>gs', gitsigns.toggle_signs, { desc = 'Git Signs Toggle' })
+        map('n', '<leader>gd', function()
+          gitsigns.diffthis '~'
+        end, { desc = 'Git Diff' })
       end,
       opts = {
         signs = {
