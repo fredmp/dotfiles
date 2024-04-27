@@ -8,13 +8,13 @@ return {
 
     vim.keymap.set('n', '<leader>ha', function()
       harpoon:list():add()
-    end)
-    vim.keymap.set('n', '<leader>hd', function()
+    end, { desc = 'Add' })
+    vim.keymap.set('n', '<leader>hr', function()
       harpoon:list():remove()
-    end)
+    end, { desc = 'Remove' })
     vim.keymap.set('n', '<leader>hm', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end)
+    end, { desc = 'Menu' })
 
     -- basic telescope configuration
     local conf = require('telescope.config').values
@@ -36,8 +36,8 @@ return {
         :find()
     end
 
-    vim.keymap.set('n', '<leader>se', function()
+    vim.keymap.set('n', '<leader>sa', function()
       toggle_telescope(harpoon:list())
-    end, { desc = 'Open harpoon window' })
+    end, { desc = 'Harpoon' })
   end,
 }

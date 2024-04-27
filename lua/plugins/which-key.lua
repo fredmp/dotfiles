@@ -27,14 +27,15 @@ return {
       -- Document existing key chains
       require('which-key').register {
         ['<leader>c'] = { name = 'Code', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = 'Document', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = 'Rename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = 'Search', _ = 'which_key_ignore' },
         ['<leader>g'] = { name = 'Git', _ = 'which_key_ignore' },
         ['<leader>h'] = { name = 'Harpoon', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = 'Tests', _ = 'which_key_ignore' },
         ['<leader>n'] = { name = 'General', _ = 'which_key_ignore' },
         ['<leader>p'] = { name = 'Paragraphs', _ = 'which_key_ignore' },
+        ['<leader>sc'] = { name = 'Code', _ = 'which_key_ignore' },
+        ['<leader>se'] = { name = 'Editor', _ = 'which_key_ignore' },
+        ['<leader>cd'] = { name = 'Debugger', _ = 'which_key_ignore' },
       }
     end,
   },
